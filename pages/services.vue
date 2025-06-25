@@ -1,7 +1,7 @@
 <template>
   <div>
     <Head>
-      <Title>Our Services</Title>
+      <Title>Our Services | SquadCoders</Title>
       <Meta name="description" content="Discover the comprehensive web development, UI/UX design, SEO, and digital strategy services offered by SquadCoders to elevate your business." />
     </Head>
 
@@ -11,7 +11,7 @@
         <h1 class="text-4xl font-bold font-headings text-primary sm:text-5xl">
           Our Services
         </h1>
-        <p class="mt-4 text-lg text-squad-medium-gray sm:text-xl max-w-2xl mx-auto">
+        <p class="mt-4 text-lg text-base-content/70 sm:text-xl max-w-2xl mx-auto">
           We provide a wide array of digital services designed to help your business thrive in the online world.
         </p>
       </div>
@@ -21,23 +21,23 @@
     <section class="py-16 md:py-24 bg-base-100">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold font-headings text-neutral">What We <span class="text-secondary">Offer</span></h2>
-            <p class="mt-4 text-lg text-squad-medium-gray max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold font-headings text-base-content">What We <span class="text-secondary">Offer</span></h2>
+            <p class="mt-4 text-lg text-base-content/70 max-w-3xl mx-auto">
                 At SquadCoders, we're equipped to handle all your digital needs. From initial concept and design through to development, launch, and ongoing optimization, our squad is here to deliver excellence.
             </p>
         </div>
 
         <!-- Service: Custom Web Development -->
-        <div id="web-development" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16">
+        <div id="web-development" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16 hover:shadow-primary/20 transition-shadow duration-300 ease-in-out">
           <figure class="lg:w-1/3 min-h-[250px] md:min-h-[300px] lg:min-h-full">
             <NuxtImg src="https://source.unsplash.com/800x600/?coding,programming,web,development" alt="Custom Web Development - Lines of code on a screen" width="800" height="600" class="w-full h-full object-cover"/>
           </figure>
           <div class="card-body lg:w-2/3">
             <h3 class="card-title text-2xl font-headings text-primary">Custom Web Development</h3>
-            <p class="text-squad-dark-gray mt-2 mb-4">
+            <p class="text-base-content/80 mt-2 mb-4">
               We specialize in creating bespoke websites and web applications that are not only visually stunning but also robust, scalable, and perfectly aligned with your business objectives. Whether you need a dynamic corporate site, a complex e-commerce platform, or a custom web tool, our developers use the latest technologies to deliver high-performance solutions.
             </p>
-            <ul class="list-disc list-inside space-y-1 text-squad-medium-gray mb-6">
+            <ul class="list-disc list-inside space-y-1 text-base-content/70 mb-6">
               <li>Front-end Development (Vue.js, React, Angular)</li>
               <li>Back-end Development (Node.js, Python, PHP)</li>
               <li>Full-Stack Solutions & API Development</li>
@@ -45,19 +45,19 @@
               <li>E-commerce & Online Store Development</li>
             </ul>
             <div class="card-actions justify-start">
-              <NuxtLink to="/contact?service=web-development" class="btn btn-primary">Discuss Your Project</NuxtLink>
+              <NuxtLink to="/contact?service=web-development" class="btn btn-primary hover:btn-primary-focus">Discuss Your Project</NuxtLink>
             </div>
           </div>
         </div>
 
         <!-- Service: UI/UX Design -->
-        <div id="ui-ux-design" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16">
+        <div id="ui-ux-design" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16 hover:shadow-secondary/20 transition-shadow duration-300 ease-in-out">
           <div class="card-body lg:w-2/3 lg:order-last">
             <h3 class="card-title text-2xl font-headings text-secondary">UI/UX Design</h3>
-            <p class="text-squad-dark-gray mt-2 mb-4">
+            <p class="text-base-content/80 mt-2 mb-4">
               User experience is at the heart of everything we design. Our UI/UX experts craft intuitive, engaging, and aesthetically pleasing interfaces that captivate your audience and make interactions seamless. We follow a user-centered design process, from research and wireframing to prototyping and user testing.
             </p>
-            <ul class="list-disc list-inside space-y-1 text-squad-medium-gray mb-6">
+            <ul class="list-disc list-inside space-y-1 text-base-content/70 mb-6">
               <li>User Research & Persona Development</li>
               <li>Wireframing & Prototyping</li>
               <li>Responsive Web Design</li>
@@ -65,7 +65,7 @@
               <li>Branding & Visual Identity</li>
             </ul>
             <div class="card-actions justify-start">
-              <NuxtLink to="/contact?service=ui-ux-design" class="btn btn-secondary">Enhance Your UX</NuxtLink>
+              <NuxtLink to="/contact?service=ui-ux-design" class="btn btn-secondary hover:btn-secondary-focus">Enhance Your UX</NuxtLink>
             </div>
           </div>
           <figure class="lg:w-1/3 lg:order-first min-h-[250px] md:min-h-[300px] lg:min-h-full">
@@ -74,16 +74,16 @@
         </div>
 
         <!-- Service: SEO & Digital Strategy -->
-        <div id="seo" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16">
+        <div id="seo" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16 hover:shadow-accent/20 transition-shadow duration-300 ease-in-out">
           <figure class="lg:w-1/3 min-h-[250px] md:min-h-[300px] lg:min-h-full">
             <NuxtImg src="https://source.unsplash.com/800x600/?seo,analytics,digital,strategy,charts" alt="SEO & Digital Strategy - Analytics dashboard" width="800" height="600" class="w-full h-full object-cover"/>
           </figure>
           <div class="card-body lg:w-2/3">
             <h3 class="card-title text-2xl font-headings text-accent">SEO & Digital Strategy</h3>
-            <p class="text-squad-dark-gray mt-2 mb-4">
+            <p class="text-base-content/80 mt-2 mb-4">
               A great website needs to be discoverable. Our SEO and digital strategy services are designed to increase your online visibility, attract qualified organic traffic, and improve your search engine rankings. We develop comprehensive strategies tailored to your industry and audience.
             </p>
-            <ul class="list-disc list-inside space-y-1 text-squad-medium-gray mb-6">
+            <ul class="list-disc list-inside space-y-1 text-base-content/70 mb-6">
               <li>Search Engine Optimization (On-page, Off-page, Technical)</li>
               <li>Keyword Research & Analysis</li>
               <li>Content Marketing Strategy</li>
@@ -91,7 +91,7 @@
               <li>Analytics & Performance Tracking</li>
             </ul>
             <div class="card-actions justify-start">
-              <NuxtLink to="/contact?service=seo" class="btn btn-accent">Boost Your Visibility</NuxtLink>
+              <NuxtLink to="/contact?service=seo" class="btn btn-accent text-accent-content hover:btn-accent-focus">Boost Your Visibility</NuxtLink>
             </div>
           </div>
         </div>
@@ -99,87 +99,88 @@
       </div>
     </section>
 
-    <!-- Our Process (Optional) -->
+    <!-- Our Process -->
     <section class="py-16 md:py-24 bg-base-200">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold font-headings text-neutral">Our Approach to <span class="text-primary">Excellence</span></h2>
-                <p class="mt-4 text-lg text-squad-medium-gray max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold font-headings text-base-content">Our Approach to <span class="text-primary">Excellence</span></h2>
+                <p class="mt-4 text-lg text-base-content/70 max-w-2xl mx-auto">
                     We follow a structured yet flexible process to ensure project success and client satisfaction.
                 </p>
             </div>
-            <div class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <!-- DaisyUI Timeline uses ::before for line, so HRs are not strictly needed for the line itself unless for color control. -->
+            <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
               <li>
                 <div class="timeline-middle">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
                 </div>
-                <div class="timeline-start md:text-end mb-10">
-                  <time class="font-mono italic text-squad-medium-gray">Phase 1</time>
+                <div class="timeline-start md:text-end mb-10 p-4 bg-base-100 rounded-lg shadow-md">
+                  <time class="font-mono italic text-xs text-base-content/60">Phase 1</time>
                   <div class="text-lg font-black font-headings text-primary">Discovery & Planning</div>
-                  Understanding your goals, audience, and project requirements. We define scope, strategy, and create a detailed project roadmap.
+                  <p class="text-sm text-base-content/70">Understanding your goals, audience, and project requirements. We define scope, strategy, and create a detailed project roadmap.</p>
                 </div>
-                <hr class="bg-primary"/>
+                <hr class="!bg-primary"/>
               </li>
               <li>
-                <hr class="bg-primary"/>
+                <hr class="!bg-primary"/>
                 <div class="timeline-middle">
                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-secondary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
                 </div>
-                <div class="timeline-end mb-10">
-                  <time class="font-mono italic text-squad-medium-gray">Phase 2</time>
+                <div class="timeline-end mb-10 p-4 bg-base-100 rounded-lg shadow-md">
+                  <time class="font-mono italic text-xs text-base-content/60">Phase 2</time>
                   <div class="text-lg font-black font-headings text-secondary">Design & Prototyping</div>
-                  Crafting user-centric designs and interactive prototypes. We iterate based on your feedback to ensure the vision is perfectly captured.
+                  <p class="text-sm text-base-content/70">Crafting user-centric designs and interactive prototypes. We iterate based on your feedback to ensure the vision is perfectly captured.</p>
                 </div>
-                <hr class="bg-secondary"/>
+                <hr class="!bg-secondary"/>
               </li>
               <li>
-                <hr class="bg-secondary"/>
+                <hr class="!bg-secondary"/>
                 <div class="timeline-middle">
                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
                 </div>
-                <div class="timeline-start md:text-end mb-10">
-                  <time class="font-mono italic text-squad-medium-gray">Phase 3</time>
+                <div class="timeline-start md:text-end mb-10 p-4 bg-base-100 rounded-lg shadow-md">
+                  <time class="font-mono italic text-xs text-base-content/60">Phase 3</time>
                   <div class="text-lg font-black font-headings text-accent">Development & Testing</div>
-                  Bringing designs to life with clean, efficient code. Rigorous testing is conducted to ensure quality, performance, and reliability.
+                  <p class="text-sm text-base-content/70">Bringing designs to life with clean, efficient code. Rigorous testing is conducted to ensure quality, performance, and reliability.</p>
                 </div>
-                <hr class="bg-accent"/>
+                <hr class="!bg-accent"/>
               </li>
               <li>
-                <hr class="bg-accent"/>
+                <hr class="!bg-accent"/>
                 <div class="timeline-middle">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
                 </div>
-                <div class="timeline-end mb-10">
-                  <time class="font-mono italic text-squad-medium-gray">Phase 4</time>
+                <div class="timeline-end mb-10 p-4 bg-base-100 rounded-lg shadow-md">
+                  <time class="font-mono italic text-xs text-base-content/60">Phase 4</time>
                   <div class="text-lg font-black font-headings text-primary">Deployment & Launch</div>
-                  Seamlessly deploying your project to live servers. We manage the launch process to ensure a smooth transition.
+                  <p class="text-sm text-base-content/70">Seamlessly deploying your project to live servers. We manage the launch process to ensure a smooth transition.</p>
                 </div>
-                 <hr class="bg-primary"/>
+                 <hr class="!bg-primary"/>
               </li>
                <li>
-                <hr class="bg-primary"/>
+                <hr class="!bg-primary"/>
                 <div class="timeline-middle">
                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-secondary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
                 </div>
-                <div class="timeline-start md:text-end">
-                  <time class="font-mono italic text-squad-medium-gray">Phase 5</time>
+                <div class="timeline-start md:text-end p-4 bg-base-100 rounded-lg shadow-md">
+                  <time class="font-mono italic text-xs text-base-content/60">Phase 5</time>
                   <div class="text-lg font-black font-headings text-secondary">Support & Growth</div>
-                  Providing ongoing support, maintenance, and strategic advice to help your digital presence evolve and grow.
+                  <p class="text-sm text-base-content/70">Providing ongoing support, maintenance, and strategic advice to help your digital presence evolve and grow.</p>
                 </div>
               </li>
-            </div>
+            </ul>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-r from-accent to-secondary text-neutral-content">
+    <section class="py-16 md:py-24 bg-gradient-to-r from-accent to-secondary text-accent-content">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold font-headings text-white">Ready to Elevate Your Digital Presence?</h2>
-        <p class="mt-4 text-lg text-gray-200 max-w-xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold font-headings">Ready to Elevate Your Digital Presence?</h2>
+        <p class="mt-4 text-lg text-accent-content/80 max-w-xl mx-auto">
           Let's discuss your specific needs and how our services can help you achieve your business goals.
         </p>
         <div class="mt-8">
-          <NuxtLink to="/contact" class="btn btn-lg bg-white text-primary hover:bg-gray-100 border-none">
+          <NuxtLink to="/contact" class="btn btn-lg btn-neutral hover:btn-neutral-focus">
             Request a Consultation
           </NuxtLink>
         </div>
@@ -195,33 +196,44 @@
 
 <style scoped>
 .service-section:target {
-  /* Optional: Add a style for when an #anchor link targets a section */
-  /* For example, a subtle animation or border */
-  /* animation: highlight 1s ease-out; */
+  /* Using DaisyUI focus state or a more subtle highlight might be better than custom animation
+     For example, adding a class dynamically on hash change.
+     For now, keeping it simple as DaisyUI doesn't have a direct :target utility.
+  */
+  /* outline: 2px solid var(--fallback-p,oklch(var(--p)/.5));
+  outline-offset: 4px; */
 }
 
-/* @keyframes highlight {
-  from { background-color: var(--fallback-s, oklch(var(--s) / 0.2)); }
-  to { background-color: transparent; }
-} */
-
-/* Ensure images in cards don't break layout on smaller screens */
+/* Ensure images in cards don't break layout on smaller screens and maintain aspect ratio */
+.service-section figure {
+  overflow: hidden; /* Ensure object-cover doesn't spill */
+}
 .service-section figure img {
-  max-height: 400px; /* Adjust as needed */
-}
-@media (min-width: 1024px) { /* lg breakpoint */
-  .service-section figure img {
-    max-height: none; /* Allow full height on larger screens where side-by-side layout is active */
-  }
+  /* max-height: 400px; /* Removed to let card height dictate or rely on min-h set on figure */
+  /* object-position: center; /* Ensure image is centered if it's not perfectly aspect matched */
 }
 
-/* Style for the timeline hr */
+/* DaisyUI's timeline usually handles its own lines.
+   The custom HR styling might be for specific color control or if the default line is not visible enough.
+   If using DaisyUI v3+, the timeline component has improved.
+   Forcing HR color with !important if DaisyUI default line is overriding.
+*/
 .timeline li hr {
-  height: calc(100% - 2.5rem); /* Adjust based on spacing */
-  margin-top: 1.25rem; /* Adjust based on spacing */
-  margin-bottom: 1.25rem; /* Adjust based on spacing */
+  height: calc(100% - 2rem); /* Adjusted for potentially different icon/spacing */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.75; /* Make lines a bit more subtle */
 }
 .timeline li:last-child hr {
   display: none;
 }
+
+/* Customizing timeline content appearance */
+.timeline .timeline-start, .timeline .timeline-end {
+  transition: transform 0.3s ease-in-out;
+}
+.timeline .timeline-start:hover, .timeline .timeline-end:hover {
+  transform: translateY(-3px);
+}
+
 </style>
