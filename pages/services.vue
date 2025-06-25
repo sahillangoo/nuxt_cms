@@ -29,8 +29,8 @@
 
         <!-- Service: Custom Web Development -->
         <div id="web-development" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16">
-          <figure class="lg:w-1/3">
-            <img src="https://via.placeholder.com/800x600/00A99D/FFFFFF?text=Web+Development" alt="Custom Web Development" class="w-full h-full object-cover"/>
+          <figure class="lg:w-1/3 min-h-[250px] md:min-h-[300px] lg:min-h-full">
+            <NuxtImg src="https://source.unsplash.com/800x600/?coding,programming,web,development" alt="Custom Web Development - Lines of code on a screen" width="800" height="600" class="w-full h-full object-cover"/>
           </figure>
           <div class="card-body lg:w-2/3">
             <h3 class="card-title text-2xl font-headings text-primary">Custom Web Development</h3>
@@ -68,15 +68,15 @@
               <NuxtLink to="/contact?service=ui-ux-design" class="btn btn-secondary">Enhance Your UX</NuxtLink>
             </div>
           </div>
-          <figure class="lg:w-1/3 lg:order-first">
-            <img src="https://via.placeholder.com/800x600/FF6F00/FFFFFF?text=UI/UX+Design" alt="UI/UX Design" class="w-full h-full object-cover"/>
+          <figure class="lg:w-1/3 lg:order-first min-h-[250px] md:min-h-[300px] lg:min-h-full">
+            <NuxtImg src="https://source.unsplash.com/800x600/?ui,ux,interface,design,wireframe" alt="UI/UX Design - Wireframes and design process" width="800" height="600" class="w-full h-full object-cover"/>
           </figure>
         </div>
 
         <!-- Service: SEO & Digital Strategy -->
         <div id="seo" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16">
-          <figure class="lg:w-1/3">
-            <img src="https://via.placeholder.com/800x600/6A0DAD/FFFFFF?text=SEO+%26+Strategy" alt="SEO & Digital Strategy" class="w-full h-full object-cover"/>
+          <figure class="lg:w-1/3 min-h-[250px] md:min-h-[300px] lg:min-h-full">
+            <NuxtImg src="https://source.unsplash.com/800x600/?seo,analytics,digital,strategy,charts" alt="SEO & Digital Strategy - Analytics dashboard" width="800" height="600" class="w-full h-full object-cover"/>
           </figure>
           <div class="card-body lg:w-2/3">
             <h3 class="card-title text-2xl font-headings text-accent">SEO & Digital Strategy</h3>

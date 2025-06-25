@@ -39,8 +39,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
           <!-- Portfolio Item 1 -->
-          <div class="card bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><img src="https://via.placeholder.com/600x400/00A99D/FFFFFF?text=Project+Alpha" alt="Project Alpha" class="w-full h-full object-cover" /></figure>
+          <div class="card h-80 bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <figure><NuxtImg src="https://source.unsplash.com/600x400/?modern,website,design,clean" alt="Project Alpha - E-commerce Platform Development" width="600" height="400" class="w-full h-full object-cover" /></figure>
             <div class="card-body items-center justify-center text-center p-4 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-300">
               <h3 class="card-title text-2xl font-headings text-white mb-2">Project Alpha</h3>
               <p class="text-gray-300 text-sm mb-4">E-commerce Platform Development</p>
@@ -51,8 +51,8 @@
           </div>
 
           <!-- Portfolio Item 2 -->
-          <div class="card bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><img src="https://via.placeholder.com/600x400/FF6F00/FFFFFF?text=Project+Beta" alt="Project Beta" class="w-full h-full object-cover" /></figure>
+          <div class="card h-80 bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <figure><NuxtImg src="https://source.unsplash.com/600x400/?mobile,application,interface" alt="Project Beta - Corporate Website Redesign" width="600" height="400" class="w-full h-full object-cover" /></figure>
             <div class="card-body items-center justify-center text-center p-4 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-300">
               <h3 class="card-title text-2xl font-headings text-white mb-2">Project Beta</h3>
               <p class="text-gray-300 text-sm mb-4">Corporate Website Redesign</p>
@@ -63,8 +63,8 @@
           </div>
 
           <!-- Portfolio Item 3 -->
-          <div class="card bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><img src="https://via.placeholder.com/600x400/6A0DAD/FFFFFF?text=Project+Gamma" alt="Project Gamma" class="w-full h-full object-cover" /></figure>
+          <div class="card h-80 bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <figure><NuxtImg src="https://source.unsplash.com/600x400/?tech,startup,dashboard" alt="Project Gamma - Mobile App UI/UX" width="600" height="400" class="w-full h-full object-cover" /></figure>
             <div class="card-body items-center justify-center text-center p-4 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-300">
               <h3 class="card-title text-2xl font-headings text-white mb-2">Project Gamma</h3>
               <p class="text-gray-300 text-sm mb-4">Mobile App UI/UX</p>
@@ -75,8 +75,8 @@
           </div>
 
           <!-- Portfolio Item 4 -->
-          <div class="card bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><img src="https://via.placeholder.com/600x400/007BFF/FFFFFF?text=Project+Delta" alt="Project Delta" class="w-full h-full object-cover" /></figure>
+          <div class="card h-80 bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <figure><NuxtImg src="https://source.unsplash.com/600x400/?ecommerce,product,online,store" alt="Project Delta - SaaS Platform Branding" width="600" height="400" class="w-full h-full object-cover" /></figure>
             <div class="card-body items-center justify-center text-center p-4 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-300">
               <h3 class="card-title text-2xl font-headings text-white mb-2">Project Delta</h3>
               <p class="text-gray-300 text-sm mb-4">SaaS Platform Branding</p>
@@ -87,8 +87,8 @@
           </div>
 
           <!-- Portfolio Item 5 -->
-          <div class="card bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><img src="https://via.placeholder.com/600x400/28A745/FFFFFF?text=Project+Epsilon" alt="Project Epsilon" class="w-full h-full object-cover" /></figure>
+          <div class="card h-80 bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <figure><NuxtImg src="https://source.unsplash.com/600x400/?data,visualization,graph,charts" alt="Project Epsilon - Non-profit Organization Website" width="600" height="400" class="w-full h-full object-cover" /></figure>
             <div class="card-body items-center justify-center text-center p-4 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-300">
               <h3 class="card-title text-2xl font-headings text-white mb-2">Project Epsilon</h3>
               <p class="text-gray-300 text-sm mb-4">Non-profit Organization Website</p>
@@ -99,8 +99,8 @@
           </div>
 
           <!-- Portfolio Item 6 -->
-          <div class="card bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><img src="https://via.placeholder.com/600x400/DC3545/FFFFFF?text=Project+Zeta" alt="Project Zeta" class="w-full h-full object-cover" /></figure>
+          <div class="card h-80 bg-base-200 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <figure><NuxtImg src="https://source.unsplash.com/600x400/?creative,agency,branding,design" alt="Project Zeta - Interactive Web Application" width="600" height="400" class="w-full h-full object-cover" /></figure>
             <div class="card-body items-center justify-center text-center p-4 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-300">
               <h3 class="card-title text-2xl font-headings text-white mb-2">Project Zeta</h3>
               <p class="text-gray-300 text-sm mb-4">Interactive Web Application</p>

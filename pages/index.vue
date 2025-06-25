@@ -81,9 +81,9 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="card bg-base-100 shadow-lg">
-            <figure class="px-10 pt-10">
+            <figure class="px-10 pt-10 h-56">
               <!-- Placeholder image -->
-              <img src="https://via.placeholder.com/400x200/00A99D/FFFFFF?text=Web+Development" alt="Web Development" class="rounded-xl h-48 w-full object-cover" />
+              <NuxtImg src="https://source.unsplash.com/400x220/?web,development,coding" alt="Custom Web Development" width="400" height="220" class="rounded-xl h-full w-full object-cover" />
             </figure>
             <div class="card-body">
               <h3 class="card-title font-headings text-xl text-neutral">Custom Web Development</h3>
@@ -94,8 +94,8 @@
             </div>
           </div>
           <div class="card bg-base-100 shadow-lg">
-            <figure class="px-10 pt-10">
-              <img src="https://via.placeholder.com/400x200/FF6F00/FFFFFF?text=UI/UX+Design" alt="UI/UX Design" class="rounded-xl h-48 w-full object-cover" />
+            <figure class="px-10 pt-10 h-56">
+              <NuxtImg src="https://source.unsplash.com/400x220/?ui,ux,design,interface" alt="UI/UX Design" width="400" height="220" class="rounded-xl h-full w-full object-cover" />
             </figure>
             <div class="card-body">
               <h3 class="card-title font-headings text-xl text-neutral">UI/UX Design</h3>
@@ -106,8 +106,8 @@
             </div>
           </div>
           <div class="card bg-base-100 shadow-lg md:col-span-2 lg:col-span-1">
-             <figure class="px-10 pt-10">
-              <img src="https://via.placeholder.com/400x200/6A0DAD/FFFFFF?text=SEO+Optimization" alt="SEO Optimization" class="rounded-xl h-48 w-full object-cover" />
+             <figure class="px-10 pt-10 h-56">
+              <NuxtImg src="https://source.unsplash.com/400x220/?seo,digital,strategy,analytics" alt="SEO & Digital Strategy" width="400" height="220" class="rounded-xl h-full w-full object-cover" />
             </figure>
             <div class="card-body">
               <h3 class="card-title font-headings text-xl text-neutral">SEO & Digital Strategy</h3>
@@ -134,8 +134,8 @@
                 </p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card card-compact bg-base-200 shadow-xl image-full transform hover:scale-105 transition-transform duration-300">
-                    <figure><img src="https://via.placeholder.com/600x400/00A99D/FFFFFF?text=Project+Alpha" alt="Project Alpha" /></figure>
+                <div class="card card-compact bg-base-200 shadow-xl image-full transform hover:scale-105 transition-transform duration-300 h-64 md:h-72">
+                    <figure><NuxtImg src="https://source.unsplash.com/600x400/?website,project,interface" alt="Project Alpha - E-commerce Platform" width="600" height="400" class="w-full h-full object-cover" /></figure>
                     <div class="card-body justify-end">
                         <h3 class="card-title text-white font-headings">Project Alpha</h3>
                         <p class="text-gray-300 text-sm">E-commerce platform development.</p>
@@ -144,8 +144,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card-compact bg-base-200 shadow-xl image-full transform hover:scale-105 transition-transform duration-300">
-                    <figure><img src="https://via.placeholder.com/600x400/FF6F00/FFFFFF?text=Project+Beta" alt="Project Beta" /></figure>
+                <div class="card card-compact bg-base-200 shadow-xl image-full transform hover:scale-105 transition-transform duration-300 h-64 md:h-72">
+                    <figure><NuxtImg src="https://source.unsplash.com/600x400/?mobile,app,design" alt="Project Beta - Corporate Website Redesign" width="600" height="400" class="w-full h-full object-cover" /></figure>
                     <div class="card-body justify-end">
                         <h3 class="card-title text-white font-headings">Project Beta</h3>
                         <p class="text-gray-300 text-sm">Corporate website redesign.</p>
@@ -154,8 +154,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card-compact bg-base-200 shadow-xl image-full transform hover:scale-105 transition-transform duration-300">
-                    <figure><img src="https://via.placeholder.com/600x400/6A0DAD/FFFFFF?text=Project+Gamma" alt="Project Gamma" /></figure>
+                <div class="card card-compact bg-base-200 shadow-xl image-full transform hover:scale-105 transition-transform duration-300 h-64 md:h-72">
+                    <figure><NuxtImg src="https://source.unsplash.com/600x400/?tech,solution,graph" alt="Project Gamma - Mobile App UI/UX Design" width="600" height="400" class="w-full h-full object-cover" /></figure>
                     <div class="card-body justify-end">
                         <h3 class="card-title text-white font-headings">Project Gamma</h3>
                         <p class="text-gray-300 text-sm">Mobile app UI/UX design.</p>

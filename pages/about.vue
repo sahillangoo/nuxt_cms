@@ -35,9 +35,9 @@
               Every line of code we write, every pixel we place, and every strategy we devise is driven by our commitment to quality, creativity, and achieving outstanding results for those we serve.
             </p>
           </div>
-          <div>
+          <div class="h-full">
             <!-- Placeholder image, ideally a team photo or abstract representation of collaboration -->
-            <img src="https://via.placeholder.com/600x400/00A99D/FFFFFF?text=Our+Journey" alt="Our Mission at SquadCoders" class="rounded-lg shadow-xl w-full h-auto object-cover">
+            <NuxtImg src="https://source.unsplash.com/600x450/?team,collaboration,office,startup" alt="Our Mission and Story at SquadCoders - A collaborative workspace" width="600" height="450" class="rounded-lg shadow-xl w-full h-full object-cover"/>
           </div>
         </div>
       </div>
@@ -91,8 +91,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           <!-- Team Member Placeholder 1 -->
           <div class="card bg-base-200 shadow-md">
-            <figure class="px-6 pt-6">
-              <img src="https://via.placeholder.com/300x300/00A99D/FFFFFF?text=Team+Member" alt="Team Member" class="rounded-xl w-full h-60 object-cover" />
+            <figure class="px-6 pt-6 h-64">
+              <NuxtImg src="https://source.unsplash.com/300x300/?professional,headshot,abstract,male" alt="Alex Doe - Lead Developer" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
             </figure>
             <div class="card-body items-center text-center">
               <h3 class="card-title font-headings text-lg">Alex Doe</h3>
@@ -102,8 +102,8 @@
           </div>
           <!-- Team Member Placeholder 2 -->
           <div class="card bg-base-200 shadow-md">
-            <figure class="px-6 pt-6">
-              <img src="https://via.placeholder.com/300x300/FF6F00/FFFFFF?text=Team+Member" alt="Team Member" class="rounded-xl w-full h-60 object-cover" />
+            <figure class="px-6 pt-6 h-64">
+              <NuxtImg src="https://source.unsplash.com/300x300/?professional,headshot,abstract,female" alt="Jamie Smith - UI/UX Lead" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
             </figure>
             <div class="card-body items-center text-center">
               <h3 class="card-title font-headings text-lg">Jamie Smith</h3>
@@ -113,8 +113,8 @@
           </div>
           <!-- Team Member Placeholder 3 -->
           <div class="card bg-base-200 shadow-md">
-            <figure class="px-6 pt-6">
-              <img src="https://via.placeholder.com/300x300/6A0DAD/FFFFFF?text=Team+Member" alt="Team Member" class="rounded-xl w-full h-60 object-cover" />
+            <figure class="px-6 pt-6 h-64">
+              <NuxtImg src="https://source.unsplash.com/300x300/?project,manager,profile,tech" alt="Casey Lee - Project Manager" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
             </figure>
             <div class="card-body items-center text-center">
               <h3 class="card-title font-headings text-lg">Casey Lee</h3>
