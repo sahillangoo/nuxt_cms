@@ -11,7 +11,8 @@
 // For example, setting up global SEO metadata:
 useHead({
   htmlAttrs: {
-    lang: 'en'
+    lang: 'en',
+    'data-theme': 'light' // Default theme for SSR
   },
   titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} - SquadCoders` : 'SquadCoders - Web Agency';

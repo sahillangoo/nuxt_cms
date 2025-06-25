@@ -13,9 +13,11 @@
           <li><NuxtLink to="/about" class="btn btn-ghost [&.router-link-exact-active]:btn-active">About Us</NuxtLink></li>
           <li><NuxtLink to="/services" class="btn btn-ghost [&.router-link-exact-active]:btn-active">Services</NuxtLink></li>
           <li><NuxtLink to="/portfolio" class="btn btn-ghost [&.router-link-exact-active]:btn-active">Portfolio</NuxtLink></li>
+          <li><NuxtLink to="/demo" class="btn btn-ghost [&.router-link-exact-active]:btn-active">Demo</NuxtLink></li>
         </ul>
       </div>
       <div class="navbar-end">
+        <UiThemeSwitcher class="mr-2" />
         <NuxtLink to="/contact" class="btn btn-secondary btn-sm hidden lg:flex">Contact Us</NuxtLink>
         <div class="dropdown dropdown-end lg:hidden">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -26,6 +28,7 @@
             <li><NuxtLink to="/about" class="[&.router-link-exact-active]:active">About Us</NuxtLink></li>
             <li><NuxtLink to="/services" class="[&.router-link-exact-active]:active">Services</NuxtLink></li>
             <li><NuxtLink to="/portfolio" class="[&.router-link-exact-active]:active">Portfolio</NuxtLink></li>
+            <li><NuxtLink to="/demo" class="[&.router-link-exact-active]:active">Demo</NuxtLink></li>
             <li><NuxtLink to="/contact" class="btn btn-secondary btn-sm w-full mt-2">Contact Us</NuxtLink></li>
           </ul>
         </div>
@@ -54,6 +57,8 @@
           <NuxtLink to="/services" class="link link-hover">Services</NuxtLink>
           <NuxtLink to="/portfolio" class="link link-hover">Portfolio</NuxtLink>
           <NuxtLink to="/contact" class="link link-hover">Contact</NuxtLink>
+          <NuxtLink to="/terms" class="link link-hover">Terms</NuxtLink>
+          <NuxtLink to="/privacy" class="link link-hover">Privacy</NuxtLink>
         </div>
       </nav>
       <nav>
@@ -70,17 +75,3 @@
 <script setup>
 // No script needed for mobile menu toggle as DaisyUI handles dropdown behavior
 </script>
-
-<style scoped>
-/* Scoped styles can still be used for other specific layout elements if needed, */
-/* but nav link styles have been moved to utility classes in the template. */
-/* Ensure router-link-exact-active styles are compatible with DaisyUI button states if needed */
-.menu li > .[&.router-link-exact-active] {
-  @apply active; /* Or btn-active or any other DaisyUI active class */
-}
-.menu.menu-sm li > .[&.router-link-exact-active] {
-   /* For mobile dropdown, ensure active state is clear */
-  @apply bg-primary text-primary-content;
-}
-
-</style>

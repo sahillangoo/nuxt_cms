@@ -6,16 +6,10 @@
     </Head>
 
     <!-- Page Header -->
-    <section class="py-12 md:py-16 bg-base-200">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl font-bold font-headings text-primary sm:text-5xl">
-          About SquadCoders
-        </h1>
-        <p class="mt-4 text-lg text-base-content/70 sm:text-xl max-w-2xl mx-auto">
-          We are a collective of passionate developers, designers, and strategists committed to building the future of the web.
-        </p>
-      </div>
-    </section>
+    <UiPageHeader
+      title="About SquadCoders"
+      description="We are a collective of passionate developers, designers, and strategists committed to building the future of the web."
+    />
 
     <!-- Our Story / Mission -->
     <section class="py-16 md:py-24 bg-base-100">
@@ -36,7 +30,7 @@
             </p>
           </div>
           <div class="h-full">
-            <NuxtImg src="https://source.unsplash.com/600x450/?team,collaboration,office,startup" alt="Our Mission and Story at SquadCoders - A collaborative workspace" width="600" height="450" class="rounded-lg shadow-xl w-full h-full object-cover"/>
+            <NuxtImg src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=450" alt="Our Mission and Story at SquadCoders - A collaborative workspace" width="600" height="450" class="rounded-lg shadow-xl w-full h-full object-cover"/>
           </div>
         </div>
       </div>
@@ -99,7 +93,7 @@
           <!-- Team Member Placeholder 1 -->
           <div class="card bg-base-200 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
             <figure class="px-6 pt-6 h-64">
-              <NuxtImg src="https://source.unsplash.com/300x300/?professional,headshot,abstract,male" alt="Alex Doe - Lead Developer" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
+              <NuxtImg src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Alex Doe - Lead Developer" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
             </figure>
             <div class="card-body items-center text-center">
               <h3 class="card-title font-headings text-lg text-base-content">Alex Doe</h3>
@@ -110,7 +104,7 @@
           <!-- Team Member Placeholder 2 -->
           <div class="card bg-base-200 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
             <figure class="px-6 pt-6 h-64">
-              <NuxtImg src="https://source.unsplash.com/300x300/?professional,headshot,abstract,female" alt="Jamie Smith - UI/UX Lead" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
+              <NuxtImg src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Jamie Smith - UI/UX Lead" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
             </figure>
             <div class="card-body items-center text-center">
               <h3 class="card-title font-headings text-lg text-base-content">Jamie Smith</h3>
@@ -121,7 +115,7 @@
           <!-- Team Member Placeholder 3 -->
           <div class="card bg-base-200 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
             <figure class="px-6 pt-6 h-64">
-              <NuxtImg src="https://source.unsplash.com/300x300/?project,manager,profile,tech" alt="Casey Lee - Project Manager" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
+              <NuxtImg src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Casey Lee - Project Manager" width="300" height="300" class="rounded-xl w-full h-full object-cover" />
             </figure>
             <div class="card-body items-center text-center">
               <h3 class="card-title font-headings text-lg text-base-content">Casey Lee</h3>

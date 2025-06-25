@@ -6,98 +6,81 @@
     </Head>
 
     <!-- Page Header -->
-    <section class="py-12 md:py-16 bg-base-200">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl font-bold font-headings text-primary sm:text-5xl">
-          Our Services
-        </h1>
-        <p class="mt-4 text-lg text-base-content/70 sm:text-xl max-w-2xl mx-auto">
-          We provide a wide array of digital services designed to help your business thrive in the online world.
-        </p>
-      </div>
-    </section>
+    <UiPageHeader
+      title="Our Services"
+      description="We provide a wide array of digital services designed to help your business thrive in the online world."
+    />
 
     <!-- Services Overview/Introduction -->
-    <section class="py-16 md:py-24 bg-base-100">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold font-headings text-base-content">What We <span class="text-secondary">Offer</span></h2>
-            <p class="mt-4 text-lg text-base-content/70 max-w-3xl mx-auto">
-                At SquadCoders, we're equipped to handle all your digital needs. From initial concept and design through to development, launch, and ongoing optimization, our squad is here to deliver excellence.
-            </p>
-        </div>
+    <UiSectionContainer
+      title="What We <span class='text-secondary'>Offer</span>"
+      description="At SquadCoders, we're equipped to handle all your digital needs. From initial concept and design through to development, launch, and ongoing optimization, our squad is here to deliver excellence."
+      background-color="bg-base-100"
+    >
+      <!-- Service: Custom Web Development -->
+      <UiServiceDetailCard
+        id="web-development"
+        title="Custom Web Development"
+        description="We specialize in creating bespoke websites and web applications that are not only visually stunning but also robust, scalable, and perfectly aligned with your business objectives. Whether you need a dynamic corporate site, a complex e-commerce platform, or a custom web tool, our developers use the latest technologies to deliver high-performance solutions."
+        image="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+        :features="[
+          'Front-end Development (Vue.js, React, Angular)',
+          'Back-end Development (Node.js, Python, PHP)',
+          'Full-Stack Solutions & API Development',
+          'Content Management Systems (CMS)',
+          'E-commerce & Online Store Development'
+        ]"
+        button-text="Discuss Your Project"
+        button-link="/contact?service=web-development"
+        title-color="text-primary"
+        button-class="btn-primary"
+        button-hover="btn-primary-focus"
+        shadow-color="hover:shadow-primary/20"
+      />
 
-        <!-- Service: Custom Web Development -->
-        <div id="web-development" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16 hover:shadow-primary/20 transition-shadow duration-300 ease-in-out">
-          <figure class="lg:w-1/3 min-h-[250px] md:min-h-[300px] lg:min-h-full">
-            <NuxtImg src="https://source.unsplash.com/800x600/?coding,programming,web,development" alt="Custom Web Development - Lines of code on a screen" width="800" height="600" class="w-full h-full object-cover"/>
-          </figure>
-          <div class="card-body lg:w-2/3">
-            <h3 class="card-title text-2xl font-headings text-primary">Custom Web Development</h3>
-            <p class="text-base-content/80 mt-2 mb-4">
-              We specialize in creating bespoke websites and web applications that are not only visually stunning but also robust, scalable, and perfectly aligned with your business objectives. Whether you need a dynamic corporate site, a complex e-commerce platform, or a custom web tool, our developers use the latest technologies to deliver high-performance solutions.
-            </p>
-            <ul class="list-disc list-inside space-y-1 text-base-content/70 mb-6">
-              <li>Front-end Development (Vue.js, React, Angular)</li>
-              <li>Back-end Development (Node.js, Python, PHP)</li>
-              <li>Full-Stack Solutions & API Development</li>
-              <li>Content Management Systems (CMS)</li>
-              <li>E-commerce & Online Store Development</li>
-            </ul>
-            <div class="card-actions justify-start">
-              <NuxtLink to="/contact?service=web-development" class="btn btn-primary hover:btn-primary-focus">Discuss Your Project</NuxtLink>
-            </div>
-          </div>
-        </div>
+      <!-- Service: UI/UX Design -->
+      <UiServiceDetailCard
+        id="ui-ux-design"
+        title="UI/UX Design"
+        description="User experience is at the heart of everything we design. Our UI/UX experts craft intuitive, engaging, and aesthetically pleasing interfaces that captivate your audience and make interactions seamless. We follow a user-centered design process, from research and wireframing to prototyping and user testing."
+        image="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+        :features="[
+          'User Research & Persona Development',
+          'Wireframing & Prototyping',
+          'Responsive Web Design',
+          'Mobile App Design (iOS & Android)',
+          'Branding & Visual Identity'
+        ]"
+        button-text="Enhance Your UX"
+        button-link="/contact?service=ui-ux-design"
+        title-color="text-secondary"
+        button-class="btn-secondary"
+        button-hover="btn-secondary-focus"
+        shadow-color="hover:shadow-secondary/20"
+        :reversed="true"
+      />
 
-        <!-- Service: UI/UX Design -->
-        <div id="ui-ux-design" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16 hover:shadow-secondary/20 transition-shadow duration-300 ease-in-out">
-          <div class="card-body lg:w-2/3 lg:order-last">
-            <h3 class="card-title text-2xl font-headings text-secondary">UI/UX Design</h3>
-            <p class="text-base-content/80 mt-2 mb-4">
-              User experience is at the heart of everything we design. Our UI/UX experts craft intuitive, engaging, and aesthetically pleasing interfaces that captivate your audience and make interactions seamless. We follow a user-centered design process, from research and wireframing to prototyping and user testing.
-            </p>
-            <ul class="list-disc list-inside space-y-1 text-base-content/70 mb-6">
-              <li>User Research & Persona Development</li>
-              <li>Wireframing & Prototyping</li>
-              <li>Responsive Web Design</li>
-              <li>Mobile App Design (iOS & Android)</li>
-              <li>Branding & Visual Identity</li>
-            </ul>
-            <div class="card-actions justify-start">
-              <NuxtLink to="/contact?service=ui-ux-design" class="btn btn-secondary hover:btn-secondary-focus">Enhance Your UX</NuxtLink>
-            </div>
-          </div>
-          <figure class="lg:w-1/3 lg:order-first min-h-[250px] md:min-h-[300px] lg:min-h-full">
-            <NuxtImg src="https://source.unsplash.com/800x600/?ui,ux,interface,design,wireframe" alt="UI/UX Design - Wireframes and design process" width="800" height="600" class="w-full h-full object-cover"/>
-          </figure>
-        </div>
-
-        <!-- Service: SEO & Digital Strategy -->
-        <div id="seo" class="service-section card lg:card-side bg-base-200 shadow-xl mb-12 md:mb-16 hover:shadow-accent/20 transition-shadow duration-300 ease-in-out">
-          <figure class="lg:w-1/3 min-h-[250px] md:min-h-[300px] lg:min-h-full">
-            <NuxtImg src="https://source.unsplash.com/800x600/?seo,analytics,digital,strategy,charts" alt="SEO & Digital Strategy - Analytics dashboard" width="800" height="600" class="w-full h-full object-cover"/>
-          </figure>
-          <div class="card-body lg:w-2/3">
-            <h3 class="card-title text-2xl font-headings text-accent">SEO & Digital Strategy</h3>
-            <p class="text-base-content/80 mt-2 mb-4">
-              A great website needs to be discoverable. Our SEO and digital strategy services are designed to increase your online visibility, attract qualified organic traffic, and improve your search engine rankings. We develop comprehensive strategies tailored to your industry and audience.
-            </p>
-            <ul class="list-disc list-inside space-y-1 text-base-content/70 mb-6">
-              <li>Search Engine Optimization (On-page, Off-page, Technical)</li>
-              <li>Keyword Research & Analysis</li>
-              <li>Content Marketing Strategy</li>
-              <li>Pay-Per-Click (PPC) Campaign Management</li>
-              <li>Analytics & Performance Tracking</li>
-            </ul>
-            <div class="card-actions justify-start">
-              <NuxtLink to="/contact?service=seo" class="btn btn-accent text-accent-content hover:btn-accent-focus">Boost Your Visibility</NuxtLink>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
+      <!-- Service: SEO & Digital Strategy -->
+      <UiServiceDetailCard
+        id="seo"
+        title="SEO & Digital Strategy"
+        description="A great website needs to be discoverable. Our SEO and digital strategy services are designed to increase your online visibility, attract qualified organic traffic, and improve your search engine rankings. We develop comprehensive strategies tailored to your industry and audience."
+        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+        :features="[
+          'Search Engine Optimization (On-page, Off-page, Technical)',
+          'Keyword Research & Analysis',
+          'Content Marketing Strategy',
+          'Pay-Per-Click (PPC) Campaign Management',
+          'Analytics & Performance Tracking'
+        ]"
+        button-text="Boost Your Visibility"
+        button-link="/contact?service=seo"
+        title-color="text-accent"
+        button-class="btn-accent"
+        button-hover="btn-accent-focus"
+        shadow-color="hover:shadow-accent/20"
+      />
+    </UiSectionContainer>
 
     <!-- Our Process -->
     <section class="py-16 md:py-24 bg-base-200">
@@ -195,45 +178,5 @@
 </script>
 
 <style scoped>
-.service-section:target {
-  /* Using DaisyUI focus state or a more subtle highlight might be better than custom animation
-     For example, adding a class dynamically on hash change.
-     For now, keeping it simple as DaisyUI doesn't have a direct :target utility.
-  */
-  /* outline: 2px solid var(--fallback-p,oklch(var(--p)/.5));
-  outline-offset: 4px; */
-}
-
-/* Ensure images in cards don't break layout on smaller screens and maintain aspect ratio */
-.service-section figure {
-  overflow: hidden; /* Ensure object-cover doesn't spill */
-}
-.service-section figure img {
-  /* max-height: 400px; /* Removed to let card height dictate or rely on min-h set on figure */
-  /* object-position: center; /* Ensure image is centered if it's not perfectly aspect matched */
-}
-
-/* DaisyUI's timeline usually handles its own lines.
-   The custom HR styling might be for specific color control or if the default line is not visible enough.
-   If using DaisyUI v3+, the timeline component has improved.
-   Forcing HR color with !important if DaisyUI default line is overriding.
-*/
-.timeline li hr {
-  height: calc(100% - 2rem); /* Adjusted for potentially different icon/spacing */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  opacity: 0.75; /* Make lines a bit more subtle */
-}
-.timeline li:last-child hr {
-  display: none;
-}
-
-/* Customizing timeline content appearance */
-.timeline .timeline-start, .timeline .timeline-end {
-  transition: transform 0.3s ease-in-out;
-}
-.timeline .timeline-start:hover, .timeline .timeline-end:hover {
-  transform: translateY(-3px);
-}
 
 </style>

@@ -9,12 +9,28 @@ export default defineNuxtConfig({
       enabled: true
     }
   },
-  css: ['~/assets/css/main.css'],
-   vite: {
+  sourcemap: {
+    server: true,
+    client: 'hidden' // Only generate sourcemaps in development
+  },
+  vite: {
     plugins: [
       tailwindcss(),
     ],
+    build: {
+      sourcemap: process.env.NODE_ENV === 'development',
+      cssCodeSplit: true
+    },
+    css: {
+      devSourcemap: true
+    }
   },
+  nitro: {
+    experimental: {
+      wasm: true
+    }
+  },
+  css: ['~/assets/css/main.css'],
 
   modules: [
     '@nuxt/content',

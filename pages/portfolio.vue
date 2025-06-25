@@ -6,16 +6,10 @@
     </Head>
 
     <!-- Page Header -->
-    <section class="py-12 md:py-16 bg-base-200">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl font-bold font-headings text-primary sm:text-5xl">
-          Our Portfolio
-        </h1>
-        <p class="mt-4 text-lg text-base-content/70 sm:text-xl max-w-2xl mx-auto">
-          A showcase of our passion, creativity, and commitment to delivering outstanding digital experiences.
-        </p>
-      </div>
-    </section>
+    <UiPageHeader
+      title="Our Portfolio"
+      description="A showcase of our passion, creativity, and commitment to delivering outstanding digital experiences."
+    />
 
     <!-- Portfolio Introduction & Filters -->
     <section class="py-8 bg-base-100">
@@ -33,110 +27,87 @@
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="pb-16 md:pb-24 bg-base-100">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+    <UiSectionContainer
+      background-color="bg-base-100"
+      padding="pb-16 md:pb-24"
+    >
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <PortfolioPortfolioItem
+          title="Project Alpha"
+          description="E-commerce Platform Development"
+          image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          link="/portfolio/project-alpha"
+          button-text="View Case Study"
+          button-class="btn-primary"
+        />
 
-          <!-- Portfolio Item 1 -->
-          <div class="card h-80 bg-base-300 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><NuxtImg src="https://source.unsplash.com/600x400/?modern,website,design,clean" alt="Project Alpha - E-commerce Platform Development" width="600" height="400" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300" /></figure>
-            <div class="card-body items-center justify-center text-center p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent group-hover:from-black/90 transition-all duration-300">
-              <h3 class="card-title text-2xl font-headings text-base-100 mb-2">Project Alpha</h3>
-              <p class="text-base-300 text-sm mb-4">E-commerce Platform Development</p>
-              <div class="card-actions">
-                <NuxtLink to="/portfolio/project-alpha" class="btn btn-sm btn-primary hover:btn-primary-focus">View Case Study</NuxtLink>
-              </div>
-            </div>
-          </div>
+        <PortfolioPortfolioItem
+          title="Project Beta"
+          description="Corporate Website Redesign"
+          image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          link="/portfolio/project-beta"
+          button-text="View Case Study"
+          button-class="btn-secondary"
+        />
 
-          <!-- Portfolio Item 2 -->
-          <div class="card h-80 bg-base-300 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><NuxtImg src="https://source.unsplash.com/600x400/?mobile,application,interface" alt="Project Beta - Corporate Website Redesign" width="600" height="400" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300" /></figure>
-            <div class="card-body items-center justify-center text-center p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent group-hover:from-black/90 transition-all duration-300">
-              <h3 class="card-title text-2xl font-headings text-base-100 mb-2">Project Beta</h3>
-              <p class="text-base-300 text-sm mb-4">Corporate Website Redesign</p>
-              <div class="card-actions">
-                <NuxtLink to="/portfolio/project-beta" class="btn btn-sm btn-secondary hover:btn-secondary-focus">View Case Study</NuxtLink>
-              </div>
-            </div>
-          </div>
+        <PortfolioPortfolioItem
+          title="Project Gamma"
+          description="Mobile App UI/UX"
+          image="https://images.unsplash.com/photo-1559028006-448665bd7c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          link="/portfolio/project-gamma"
+          button-text="View Case Study"
+          button-class="btn-accent"
+        />
 
-          <!-- Portfolio Item 3 -->
-          <div class="card h-80 bg-base-300 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><NuxtImg src="https://source.unsplash.com/600x400/?tech,startup,dashboard" alt="Project Gamma - Mobile App UI/UX" width="600" height="400" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300" /></figure>
-            <div class="card-body items-center justify-center text-center p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent group-hover:from-black/90 transition-all duration-300">
-              <h3 class="card-title text-2xl font-headings text-base-100 mb-2">Project Gamma</h3>
-              <p class="text-base-300 text-sm mb-4">Mobile App UI/UX</p>
-              <div class="card-actions">
-                <NuxtLink to="/portfolio/project-gamma" class="btn btn-sm btn-accent text-accent-content hover:btn-accent-focus">View Case Study</NuxtLink>
-              </div>
-            </div>
-          </div>
+        <PortfolioPortfolioItem
+          title="Project Delta"
+          description="SaaS Platform Branding"
+          image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          link="/portfolio/project-delta"
+          button-text="View Case Study"
+          button-class="btn-primary"
+        />
 
-          <!-- Portfolio Item 4 -->
-          <div class="card h-80 bg-base-300 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><NuxtImg src="https://source.unsplash.com/600x400/?ecommerce,product,online,store" alt="Project Delta - SaaS Platform Branding" width="600" height="400" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300" /></figure>
-            <div class="card-body items-center justify-center text-center p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent group-hover:from-black/90 transition-all duration-300">
-              <h3 class="card-title text-2xl font-headings text-base-100 mb-2">Project Delta</h3>
-              <p class="text-base-300 text-sm mb-4">SaaS Platform Branding</p>
-              <div class="card-actions">
-                <NuxtLink to="/portfolio/project-delta" class="btn btn-sm btn-primary hover:btn-primary-focus">View Case Study</NuxtLink>
-              </div>
-            </div>
-          </div>
+        <PortfolioPortfolioItem
+          title="Project Epsilon"
+          description="Non-profit Organization Website"
+          image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          link="/portfolio/project-epsilon"
+          button-text="View Case Study"
+          button-class="btn-secondary"
+        />
 
-          <!-- Portfolio Item 5 -->
-          <div class="card h-80 bg-base-300 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><NuxtImg src="https://source.unsplash.com/600x400/?data,visualization,graph,charts" alt="Project Epsilon - Non-profit Organization Website" width="600" height="400" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300" /></figure>
-            <div class="card-body items-center justify-center text-center p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent group-hover:from-black/90 transition-all duration-300">
-              <h3 class="card-title text-2xl font-headings text-base-100 mb-2">Project Epsilon</h3>
-              <p class="text-base-300 text-sm mb-4">Non-profit Organization Website</p>
-              <div class="card-actions">
-                <NuxtLink to="/portfolio/project-epsilon" class="btn btn-sm btn-secondary hover:btn-secondary-focus">View Case Study</NuxtLink>
-              </div>
-            </div>
-          </div>
-
-          <!-- Portfolio Item 6 -->
-          <div class="card h-80 bg-base-300 shadow-xl image-full group transform hover:scale-105 transition-transform duration-300 ease-in-out">
-            <figure><NuxtImg src="https://source.unsplash.com/600x400/?creative,agency,branding,design" alt="Project Zeta - Interactive Web Application" width="600" height="400" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300" /></figure>
-            <div class="card-body items-center justify-center text-center p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent group-hover:from-black/90 transition-all duration-300">
-              <h3 class="card-title text-2xl font-headings text-base-100 mb-2">Project Zeta</h3>
-              <p class="text-base-300 text-sm mb-4">Interactive Web Application</p>
-              <div class="card-actions">
-                <NuxtLink to="/portfolio/project-zeta" class="btn btn-sm btn-accent text-accent-content hover:btn-accent-focus">View Case Study</NuxtLink>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- Pagination -->
-        <div class="text-center mt-12 md:mt-16">
-            <div class="join">
-                <button class="join-item btn btn-outline">«</button>
-                <button class="join-item btn btn-primary">Page 1</button>
-                <button class="join-item btn btn-outline">Page 2</button>
-                <button class="join-item btn btn-outline">Page 3</button>
-                <button class="join-item btn btn-outline">»</button>
-            </div>
-        </div>
+        <PortfolioPortfolioItem
+          title="Project Zeta"
+          description="Tech Startup Website"
+          image="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          link="/portfolio/project-zeta"
+          button-text="View Case Study"
+          button-class="btn-accent"
+        />
       </div>
-    </section>
+
+      <!-- Pagination -->
+      <div class="text-center mt-12 md:mt-16">
+          <div class="join">
+              <button class="join-item btn btn-outline">«</button>
+              <button class="join-item btn btn-primary">Page 1</button>
+              <button class="join-item btn btn-outline">Page 2</button>
+              <button class="join-item btn btn-outline">Page 3</button>
+              <button class="join-item btn btn-outline">»</button>
+          </div>
+      </div>
+    </UiSectionContainer>
 
     <!-- CTA Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-r from-primary to-accent text-primary-content">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold font-headings">Have a Project in Mind?</h2>
-        <p class="mt-4 text-lg text-primary-content/80 max-w-xl mx-auto">
-          Let's collaborate to bring your vision to life. Our squad is ready for the next challenge!
-        </p>
-        <div class="mt-8">
-          <NuxtLink to="/contact" class="btn btn-lg btn-neutral hover:btn-neutral-focus">
-            Discuss Your Project
-          </NuxtLink>
-        </div>
-      </div>
-    </section>
+    <SectionsCallToAction
+      title="Have a Project in Mind?"
+      description="Let's collaborate to bring your vision to life. Our squad is ready for the next challenge!"
+      button-text="Discuss Your Project"
+      button-link="/contact"
+      background-color="bg-gradient-to-r from-primary to-accent"
+      text-color="text-primary-content"
+    />
 
   </div>
 </template>
