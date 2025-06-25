@@ -24,5 +24,13 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils'
-  ]
+  ],
+
+  fonts: {
+    families: [
+      { name: 'Roboto', provider: 'google', weights: ['400', '500', '700'] },
+      { name: 'Poppins', provider: 'google', weights: ['400', '500', '600', '700'] },
+      { name: 'Roboto Mono', provider: 'google', weights: ['400'] }
+    ]
+  }
 })
