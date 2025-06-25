@@ -11,10 +11,10 @@
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
-              <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-              <NuxtLink to="/about" class="nav-link">About Us</NuxtLink>
-              <NuxtLink to="/services" class="nav-link">Services</NuxtLink>
-              <NuxtLink to="/portfolio" class="nav-link">Portfolio</NuxtLink>
+              <NuxtLink to="/" class="px-3 py-2 rounded-md text-sm font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors [&.router-link-exact-active]:text-primary [&.router-link-exact-active]:font-semibold">Home</NuxtLink>
+              <NuxtLink to="/about" class="px-3 py-2 rounded-md text-sm font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors [&.router-link-exact-active]:text-primary [&.router-link-exact-active]:font-semibold">About Us</NuxtLink>
+              <NuxtLink to="/services" class="px-3 py-2 rounded-md text-sm font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors [&.router-link-exact-active]:text-primary [&.router-link-exact-active]:font-semibold">Services</NuxtLink>
+              <NuxtLink to="/portfolio" class="px-3 py-2 rounded-md text-sm font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors [&.router-link-exact-active]:text-primary [&.router-link-exact-active]:font-semibold">Portfolio</NuxtLink>
               <NuxtLink to="/contact" class="btn btn-secondary btn-sm">Contact Us</NuxtLink>
             </div>
           </div>
@@ -31,10 +31,10 @@
       <!-- Mobile menu, show/hide based on menu state. -->
       <div v-show="mobileMenuOpen" class="md:hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <NuxtLink to="/" class="nav-link-mobile" @click="mobileMenuOpen = false">Home</NuxtLink>
-          <NuxtLink to="/about" class="nav-link-mobile" @click="mobileMenuOpen = false">About Us</NuxtLink>
-          <NuxtLink to="/services" class="nav-link-mobile" @click="mobileMenuOpen = false">Services</NuxtLink>
-          <NuxtLink to="/portfolio" class="nav-link-mobile" @click="mobileMenuOpen = false">Portfolio</NuxtLink>
+          <NuxtLink to="/" class="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors [&.router-link-exact-active]:text-primary [&.router-link-exact-active]:bg-base-200" @click="mobileMenuOpen = false">Home</NuxtLink>
+          <NuxtLink to="/about" class="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors [&.router-link-exact-active]:text-primary [&.router-link-exact-active]:bg-base-200" @click="mobileMenuOpen = false">About Us</NuxtLink>
+          <NuxtLink to="/services" class="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors [&.router-link-exact-active]:text-primary [&.router-link-exact-active]:bg-base-200" @click="mobileMenuOpen = false">Services</NuxtLink>
+          <NuxtLink to="/portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors [&.router-link-exact-active]:text-primary [&.router-link-exact-active]:bg-base-200" @click="mobileMenuOpen = false">Portfolio</NuxtLink>
           <NuxtLink to="/contact" class="block w-full text-left px-3 py-2 mt-1 rounded-md text-base font-medium btn btn-secondary btn-sm" @click="mobileMenuOpen = false">Contact Us</NuxtLink>
         </div>
       </div>
@@ -84,17 +84,6 @@ const mobileMenuOpen = ref(false)
 </script>
 
 <style scoped>
-.nav-link {
-  @apply px-3 py-2 rounded-md text-sm font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors;
-}
-.nav-link.router-link-exact-active {
-  @apply text-primary font-semibold;
-}
-
-.nav-link-mobile {
-  @apply block px-3 py-2 rounded-md text-base font-medium text-neutral hover:text-primary hover:bg-base-200 transition-colors;
-}
-.nav-link-mobile.router-link-exact-active {
-  @apply text-primary bg-base-200;
-}
+/* Scoped styles can still be used for other specific layout elements if needed, */
+/* but nav link styles have been moved to utility classes in the template. */
 </style>
