@@ -1,17 +1,18 @@
 import { NuxtAuthHandler } from '#auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { DrizzleAdapter } from '@auth/drizzle-adapter';
-import { users } from '~/server/db/schema';
-import { useDB } from '~/server/db';
-import { eq } from 'drizzle-orm';
+// import { DrizzleAdapter } from '@auth/drizzle-adapter'; // Not needed for JWT strategy
 import bcrypt from 'bcryptjs';
+import { eq } from 'drizzle-orm';
+import { useDB } from '~/server/db';
+import { users } from '~/server/db/schema';
 
 // Ensure useDB is called within a Nuxt context or similar if it relies on runtimeConfig
 // For server-side only usage like this, direct instantiation might be more straightforward if issues arise.
 
 export default NuxtAuthHandler({
   secret: process.env.NUXT_AUTH_SECRET || 'enter-your-secret-here-for-production', // Replace in production!
-  adapter: DrizzleAdapter(useDB()), // Pass the db instance
+  // Remove adapter for JWT strategy - database adapter is only for database sessions
+  // adapter: DrizzleAdapter(useDB()), // Comment out when using JWT strategy
   providers: [
     // @ts-expect-error You need to use .default here for it to work during SSR. May be fixed via Vite at some point
     CredentialsProvider.default({
@@ -74,14 +75,14 @@ export default NuxtAuthHandler({
     }),
   ],
   session: {
-    strategy: 'database', // Use database sessions
+    strategy: 'jwt', // Use JWT sessions for credentials provider
   },
   callbacks: {
     // @ts-ignore
-    async session({ session, user }) {
-      // user is the user object from the authorize callback or adapter
-      if (session.user && user) {
-        session.user.id = user.id;
+    async session({ session, token }) {
+      // With JWT strategy, we get token instead of user
+      if (session.user && token) {
+        session.user.id = token.id as string;
       }
       return session;
     },

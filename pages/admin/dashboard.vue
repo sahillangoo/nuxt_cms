@@ -46,7 +46,3 @@ watch(status, (newStatus) => {
 }, { immediate: true });
 
 </script>
-
-<style scoped>
-/* You can add page-specific styles here if needed */
-</style>

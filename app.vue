@@ -28,8 +28,3 @@ useHead({
   ]
 })
 </script>
-
-<style>
-/* Global styles can go here if necessary, but prefer Tailwind utilities and component styles. */
-/* The base body background and text color are handled by DaisyUI's theme system (data-theme attribute and base config). */
-</style>

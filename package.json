@@ -12,6 +12,7 @@
     "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^1.10.0",
     "@nuxt/content": "^3.6.1",
     "@nuxt/eslint": "^1.4.1",
     "@nuxt/fonts": "^0.11.4",
@@ -35,7 +36,9 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.2",
     "@sidebase/nuxt-auth": "^0.10.1",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/bcryptjs": "^2.4.6",
     "daisyui": "^5.0.43",
     "drizzle-kit": "^0.31.2"

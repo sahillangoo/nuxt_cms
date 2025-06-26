@@ -113,7 +113,3 @@ watch(status, (newStatus) => {
 }, { immediate: true });
 
 </script>
-
-<style scoped>
-/* Add any specific styles for the login page here */
-</style>

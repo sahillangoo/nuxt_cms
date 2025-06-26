@@ -109,9 +109,9 @@ const props = defineProps({
     default: 'btn-primary',
     description: "Base DaisyUI button classes."
   },
-  buttonHover: { // e.g. 'hover:btn-primary-focus', 'hover:bg-secondary'
+  buttonHover: { // e.g. 'hover:opacity-80', 'hover:bg-secondary'
     type: String,
-    default: 'btn-primary-focus', // Note: DaisyUI handles hover for themed buttons, this might be for more custom control.
+    default: 'hover:opacity-80', // Modern DaisyUI v5 approach for button hover effects
     description: "Tailwind hover class for the button."
   },
   shadowColor: { // e.g. 'hover:shadow-primary/20'

@@ -120,11 +120,3 @@
 // const activeTab = ref('All Projects');
 // const setActiveTab = (tabName) => activeTab.value = tabName;
 </script>
-
-<style scoped>
-/* Scoped styles for portfolio page if needed */
-/* The .image-full figure img transition is nice, but DaisyUI's card already has transitions.
-   If more specific image zoom is needed, it can be added here.
-   For now, focusing on DaisyUI classes.
-*/
-</style>

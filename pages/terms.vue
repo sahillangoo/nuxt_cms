@@ -137,7 +137,3 @@ const lastUpdated = new Date().toLocaleDateString('en-US', {
   day: 'numeric'
 })
 </script>
-
-<style scoped>
-/* Minimal styles - DaisyUI provides theme-based colors */
-</style>

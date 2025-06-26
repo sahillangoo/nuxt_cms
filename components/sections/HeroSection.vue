@@ -1,6 +1,6 @@
 <template>
   <section
-    class="hero min-h-[65vh] md:min-h-[75vh]"
+    class="hero min-h-[65vh] md:min-h-[75vh] bg-cover bg-center"
     :style="heroStyle"
   >
     <div class="hero-overlay bg-black" :style="{ opacity: overlayOpacity }"></div>
@@ -18,7 +18,7 @@
             v-if="primaryButton"
             :to="primaryButton.link"
             :class="primaryButton.class || 'btn-secondary'"
-            class="btn btn-lg group"
+            class="btn btn-lg min-w-[120px] group"
           >
             {{ primaryButton.text }}
             <Icon v-if="primaryButton.icon" :name="primaryButton.icon" class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:scale-110" />
@@ -27,7 +27,7 @@
             v-if="secondaryButton"
             :to="secondaryButton.link"
             :class="secondaryButton.class || 'btn-outline'"
-            class="btn btn-lg text-white border-white/80 hover:bg-white hover:text-neutral-focus group"
+            class="btn btn-lg min-w-[120px] text-white border-white/80 hover:bg-white hover:text-neutral-focus group"
           >
             {{ secondaryButton.text }}
              <Icon v-if="secondaryButton.icon" :name="secondaryButton.icon" class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:scale-110" />
@@ -98,14 +98,3 @@ const heroStyle = computed(() => {
 // the gradient is a default class and backgroundImage style overrides it.
 // The provided template already has a default gradient if no image.
 </script>
-
-<style scoped>
-.hero {
-  background-size: cover;
-  background-position: center;
-}
-/* Ensure buttons are not too small on mobile if text is long */
-.hero-content .btn {
-  min-width: 120px; /* Adjust as needed */
-}
-</style>

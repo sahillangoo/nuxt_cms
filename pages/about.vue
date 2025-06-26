@@ -159,7 +159,3 @@
 <script setup>
 // Page-specific logic can go here
 </script>
-
-<style scoped>
-/* Scoped styles for about page if needed */
-</style>

@@ -8,7 +8,7 @@
       <div class="mt-8 md:mt-10">
         <NuxtLink
           :to="buttonLink"
-          :class="buttonClassesResolved"
+          :class="mainButtonClasses"
           class="group"
         >
           {{ buttonText }}

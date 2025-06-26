@@ -12,7 +12,7 @@
       background-image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900&q=80"
       :primary-button="{ text: 'Get a Free Quote', link: '/contact', icon: 'heroicons:envelope-open-20-solid' }"
       :secondary-button="{ text: 'Our Services', link: '/services', icon: 'heroicons:briefcase-20-solid' }"
-      overlay-opacity="0.7"
+      :overlay-opacity="0.7"
     />
 
     <!-- Why Choose Us / Core Values -->
@@ -82,21 +82,21 @@
       padding-y="py-12 md:py-16"
     >
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        <PortfolioPortfolioItem
+        <PortfolioItem
           title="Project Alpha"
           description="E-commerce platform development for a growing online retailer."
           image="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=75"
           link="/portfolio/project-alpha"
           button-class="btn-primary"
         />
-        <PortfolioPortfolioItem
+        <PortfolioItem
           title="Project Beta"
           description="Full corporate website redesign focusing on UX and brand identity."
           image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=75"
           link="/portfolio/project-beta"
           button-class="btn-secondary"
         />
-        <PortfolioPortfolioItem
+        <PortfolioItem
           title="Project Gamma"
           description="Intuitive mobile app UI/UX design for a new startup."
           image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=75"
@@ -129,7 +129,3 @@
 // Could add NuxtIcon component later if needed.
 // import { Icon } from '@iconify/vue'; // Example for iconify, if you choose to use it
 </script>
-
-<style scoped>
-/* Scoped styles for homepage if needed */
-</style>

@@ -21,7 +21,7 @@
           <UiThemeSwitcher />
           <NuxtLink to="/contact" class="btn btn-secondary btn-sm hidden lg:flex">Contact Us</NuxtLink>
           <div class="dropdown dropdown-end lg:hidden">
-            <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
+            <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden" aria-label="Open navigation menu">
               <Icon name="heroicons:bars-3-20-solid" class="h-5 w-5" />
             </label>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 border border-base-300">

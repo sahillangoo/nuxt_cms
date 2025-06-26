@@ -22,7 +22,7 @@
       <div class="card-actions justify-end mt-2">
         <NuxtLink
           :to="link"
-          :class="`btn btn-sm ${buttonClassResolved} hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-offset-black/50`"
+          :class="`btn btn-sm whitespace-nowrap ${buttonClassResolved} hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-offset-black/50`"
         >
           {{ buttonText || 'View Details' }}
           <Icon name="heroicons:arrow-right-20-solid" class="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
@@ -69,10 +69,3 @@ const buttonClassResolved = computed(() => {
   return 'btn-primary'; // Fallback to primary if no valid brand color btn class is passed
 });
 </script>
-
-<style scoped>
-/* Ensure card actions don't cause overflow issues if text is long */
-.card-actions .btn {
-  white-space: nowrap;
-}
-</style>

@@ -130,7 +130,3 @@
 // This page demonstrates the component architecture
 // No additional logic needed - components handle their own state
 </script>
-
-<style scoped>
-/* Minimal styles - components handle their own styling */
-</style>

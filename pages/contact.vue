@@ -88,7 +88,3 @@ const handleFormSubmit = (formData) => {
   // Example: await $fetch('/api/contact', { method: 'POST', body: formData })
 }
 </script>
-
-<style scoped>
-/* Scoped styles for contact page if needed */
-</style>

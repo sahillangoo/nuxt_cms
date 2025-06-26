@@ -126,28 +126,3 @@ onMounted(() => {
 
 // No SSR data-theme needed here as it's client-preference driven
 </script>
-
-<style scoped>
-.dropdown-content {
-  /* DaisyUI shadow-xl is quite large, shadow-lg is more subtle */
-  box-shadow: theme('boxShadow.lg');
-}
-.menu-title span {
-  font-weight: 600;
-  color: theme('colors.base-content / 0.6');
-}
-/* Ensure buttons in menu take full width and have proper styling */
-.dropdown-content li > button {
-  border-radius: theme('borderRadius.btn');
-  padding-top: theme('spacing.2');
-  padding-bottom: theme('spacing.2');
-}
-.dropdown-content li > button:hover {
-    background-color: theme('colors.base-content / 0.1');
-}
-
-/* Active state styling for theme buttons */
-.dropdown-content li > button:is(.bg-primary) {
-    font-weight: 600;
-}
-</style>
