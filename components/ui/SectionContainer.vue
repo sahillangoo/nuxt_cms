@@ -11,6 +11,8 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
+
 const props = defineProps({
   title: {
     type: String,
@@ -20,37 +22,51 @@ const props = defineProps({
     type: String,
     default: ''
   },
-  backgroundColor: {
+  backgroundColor: { // e.g., 'bg-base-100', 'bg-base-200'
     type: String,
     default: 'bg-base-100'
   },
-  padding: {
+  paddingY: { // Vertical padding, e.g., 'py-12 md:py-16'
     type: String,
-    default: 'py-16 md:py-24'
+    default: 'py-12 md:py-16' // Reduced default padding slightly
   },
-  titleAlignment: {
+  titleAlignment: { // 'center', 'left', 'right'
     type: String,
     default: 'center'
   },
-  titleSize: {
+  titleSize: { // Tailwind text size class, e.g., 'text-2xl md:text-3xl'
     type: String,
-    default: 'text-3xl md:text-4xl'
+    default: 'text-2xl md:text-3xl lg:text-4xl' // Adjusted default title size
+  },
+  descriptionSize: { // Tailwind text size class
+    type: String,
+    default: 'text-base sm:text-lg'
+  },
+  descriptionOpacity: { // Tailwind opacity class part, e.g., 75 for text-base-content/75
+    type: [String, Number],
+    default: '75'
+  },
+  titleBottomMargin: { // e.g., 'mb-10 md:mb-12'
+    type: String,
+    default: 'mb-10 md:mb-12' // Reduced default margin slightly
   }
 })
 
-const sectionClasses = computed(() => `${props.padding} ${props.backgroundColor}`)
+const sectionClasses = computed(() => `${props.paddingY} ${props.backgroundColor}`)
 
 const titleContainerClass = computed(() => {
-  const baseClass = 'mb-12 md:mb-16'
-  return props.titleAlignment === 'center' ? `${baseClass} text-center` : baseClass
+  let alignClass = 'text-center';
+  if (props.titleAlignment === 'left') alignClass = 'text-left';
+  if (props.titleAlignment === 'right') alignClass = 'text-right';
+  return `${props.titleBottomMargin} ${alignClass}`;
 })
 
 const titleClass = computed(() =>
-  `${props.titleSize} font-bold font-headings text-base-content`
+  `${props.titleSize} font-bold font-headings text-base-content` // text-base-content will adapt to light/dark theme
 )
 
 const descriptionClass = computed(() => {
-  const baseClass = 'mt-4 text-lg text-base-content/70'
-  return props.titleAlignment === 'center' ? `${baseClass} max-w-2xl mx-auto` : baseClass
+  const maxWClass = props.titleAlignment === 'center' ? 'max-w-2xl mx-auto' : 'max-w-none';
+  return `mt-3 md:mt-4 ${props.descriptionSize} text-base-content/${props.descriptionOpacity} ${maxWClass}`;
 })
 </script>

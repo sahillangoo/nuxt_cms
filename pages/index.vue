@@ -9,9 +9,10 @@
     <SectionsHeroSection
       title="Crafting Digital Excellence, <br />One Line of Code at a Time."
       subtitle="SquadCoders is your dedicated partner for innovative web development, intuitive UI/UX design, and impactful digital solutions. Let's build your vision."
-      background-image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900"
-      :primary-button="{ text: 'Get a Free Quote', link: '/contact' }"
-      :secondary-button="{ text: 'Our Services', link: '/services' }"
+      background-image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900&q=80"
+      :primary-button="{ text: 'Get a Free Quote', link: '/contact', icon: 'heroicons:envelope-open-20-solid' }"
+      :secondary-button="{ text: 'Our Services', link: '/services', icon: 'heroicons:briefcase-20-solid' }"
+      overlay-opacity="0.7"
     />
 
     <!-- Why Choose Us / Core Values -->
@@ -24,17 +25,17 @@
         <UiFeatureCard
           title="Innovative Solutions"
           description="We leverage the latest technologies to build cutting-edge web applications tailored to your unique needs."
-          icon-name="heroicons:light-bulb"
+          icon-name="heroicons:light-bulb-20-solid"
         />
         <UiFeatureCard
           title="User-Centric Design"
           description="Our designs prioritize user experience, ensuring your audience is engaged and delighted."
-          icon-name="heroicons:users"
+          icon-name="heroicons:users-20-solid"
         />
         <UiFeatureCard
           title="Collaborative Approach"
           description="We work closely with you at every step, ensuring transparency and alignment with your goals."
-          icon-name="heroicons:code-bracket"
+          icon-name="heroicons:code-bracket-square-20-solid"
         />
       </div>
     </UiSectionContainer>
@@ -66,7 +67,10 @@
         />
       </div>
       <div class="text-center mt-12">
-        <NuxtLink to="/services" class="btn btn-primary hover:btn-primary-focus">View All Services</NuxtLink>
+        <NuxtLink to="/services" class="btn btn-primary group">
+          View All Services
+          <Icon name="heroicons:arrow-long-right-20-solid" class="w-5 h-5 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
+        </NuxtLink>
       </div>
     </UiSectionContainer>
 
@@ -75,29 +79,36 @@
       title="Our Recent <span class='text-primary'>Work</span>"
       description="We take pride in our work. Here are a few examples of how we've helped our clients succeed."
       background-color="bg-base-100"
+      padding-y="py-12 md:py-16"
     >
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <PortfolioPortfolioItem
           title="Project Alpha"
-          description="E-commerce platform development."
-          image="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          description="E-commerce platform development for a growing online retailer."
+          image="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=75"
           link="/portfolio/project-alpha"
+          button-class="btn-primary"
         />
         <PortfolioPortfolioItem
           title="Project Beta"
-          description="Corporate website redesign."
-          image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          description="Full corporate website redesign focusing on UX and brand identity."
+          image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=75"
           link="/portfolio/project-beta"
+          button-class="btn-secondary"
         />
         <PortfolioPortfolioItem
           title="Project Gamma"
-          description="Mobile app UI/UX design."
-          image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+          description="Intuitive mobile app UI/UX design for a new startup."
+          image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=75"
           link="/portfolio/project-gamma"
+          button-class="btn-accent"
         />
       </div>
       <div class="text-center mt-12">
-        <NuxtLink to="/portfolio" class="btn btn-primary hover:btn-primary-focus">Explore Full Portfolio</NuxtLink>
+        <NuxtLink to="/portfolio" class="btn btn-primary group">
+          Explore Full Portfolio
+          <Icon name="heroicons:arrow-long-right-20-solid" class="w-5 h-5 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
+        </NuxtLink>
       </div>
     </UiSectionContainer>
 
@@ -107,6 +118,7 @@
       description="Let's discuss how SquadCoders can help you achieve your digital goals. We're excited to hear about your ideas!"
       button-text="Let's Talk"
       button-link="/contact"
+      button-style="btn-secondary hover:opacity-90"
     />
 
   </div>

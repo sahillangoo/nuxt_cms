@@ -1,23 +1,31 @@
 <template>
-  <div class="card card-compact bg-base-300 shadow-xl image-full transform hover:scale-105 transition-transform duration-300 ease-in-out h-64 md:h-72 group">
-    <figure>
+  <div class="card card-compact bg-base-200 shadow-lg hover:shadow-xl image-full transition-all duration-300 ease-in-out group h-72 md:h-80 focus-within:ring-4 focus-within:ring-primary/50 rounded-xl overflow-hidden">
+    <figure class="h-full">
       <NuxtImg
         :src="image"
         :alt="title"
         width="600"
         height="400"
-        class="w-full h-full object-cover group-hover:opacity-75 transition-opacity duration-300"
+        class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:opacity-80"
+        sizes="sm:300px md:400px lg:500px"
+        format="webp"
+        loading="lazy"
+        :modifiers="{
+          quality: 75,
+          brightness: -5 // Slightly darken image for better text contrast on gradient
+        }"
       />
     </figure>
-    <div class="card-body justify-end bg-gradient-to-t from-black/70 to-transparent">
-      <h3 class="card-title text-base-100 font-headings">{{ title }}</h3>
-      <p class="text-base-300 text-sm">{{ description }}</p>
-      <div class="card-actions justify-end">
+    <div class="card-body justify-end bg-gradient-to-t from-black/80 via-black/50 to-transparent p-4 md:p-6">
+      <h3 class="card-title text-base-100 font-headings text-lg lg:text-xl drop-shadow-md">{{ title }}</h3>
+      <p class="text-base-300/90 text-xs md:text-sm drop-shadow-sm line-clamp-2">{{ description }}</p>
+      <div class="card-actions justify-end mt-2">
         <NuxtLink
           :to="link"
-          :class="`btn btn-xs ${buttonClass} hover:btn-primary-focus`"
+          :class="`btn btn-sm ${buttonClassResolved} hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-offset-black/50`"
         >
           {{ buttonText || 'View Details' }}
+          <Icon name="heroicons:arrow-right-20-solid" class="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
         </NuxtLink>
       </div>
     </div>
@@ -25,7 +33,9 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
   title: {
     type: String,
     required: true
@@ -48,7 +58,21 @@ defineProps({
   },
   buttonClass: {
     type: String,
-    default: 'btn-secondary'
+    default: 'btn-primary' // Defaulting to primary for consistency
   }
 })
+
+const buttonClassResolved = computed(() => {
+  if (props.buttonClass.includes('btn-primary') || props.buttonClass.includes('btn-secondary') || props.buttonClass.includes('btn-accent')) {
+    return props.buttonClass;
+  }
+  return 'btn-primary'; // Fallback to primary if no valid brand color btn class is passed
+});
 </script>
+
+<style scoped>
+/* Ensure card actions don't cause overflow issues if text is long */
+.card-actions .btn {
+  white-space: nowrap;
+}
+</style>
