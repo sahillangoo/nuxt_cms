@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
     "@nuxt/content": "^3.6.1",
@@ -21,7 +23,9 @@
     "@unhead/vue": "^2.0.11",
     "and": "^0.0.3",
     "audit": "^0.0.6",
+    "bcryptjs": "^3.0.2",
     "better-sqlite3": "^11.10.0",
+    "drizzle-orm": "^0.44.2",
     "eslint": "^9.29.0",
     "fix": "^0.0.6",
     "npm": "^11.4.2",
@@ -31,6 +35,9 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "daisyui": "^5.0.43"
+    "@sidebase/nuxt-auth": "^0.10.1",
+    "@types/bcryptjs": "^2.4.6",
+    "daisyui": "^5.0.43",
+    "drizzle-kit": "^0.31.2"
   }
 }
