@@ -12,7 +12,7 @@
 useHead({
   htmlAttrs: {
     lang: 'en',
-    'data-theme': 'light' // Default theme for SSR
+    // 'data-theme': 'light' // Default theme for SSR - Removed to let ThemeSwitcher plugin manage this
   },
   titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} - SquadCoders` : 'SquadCoders - Web Agency';

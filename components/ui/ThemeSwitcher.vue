@@ -1,158 +1,153 @@
 <template>
   <div class="dropdown dropdown-end">
-    <label tabindex="0" class="btn btn-ghost btn-circle">
+    <label tabindex="0" class="btn btn-ghost btn-circle" aria-label="Choose theme">
       <!-- Theme icon -->
       <Icon
         :name="currentThemeIcon"
         class="w-5 h-5"
       />
     </label>
-    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-lg bg-base-100 rounded-box w-52 border border-base-300">
-      <li class="menu-title">
-        <span>Choose Theme</span>
+    <ul tabindex="0" class="dropdown-content z-[10] menu menu-sm p-2 shadow-xl bg-base-100 rounded-box w-48 border border-base-300">
+      <li class="menu-title px-4 py-2 text-xs">
+        <span>Theme</span>
       </li>
       <li>
-        <a
+        <button
           @click="setTheme('light')"
-          class="flex items-center gap-2"
-          :class="{ 'active': currentTheme === 'light' }"
+          class="flex items-center gap-2 w-full text-left"
+          :class="{ 'bg-primary text-primary-content focus:bg-primary focus:text-primary-content': effectiveTheme === 'light' }"
         >
-          <Icon name="heroicons:sun" class="w-4 h-4" />
+          <Icon name="heroicons:sun-20-solid" class="w-4 h-4" />
           Light
           <Icon
-            v-if="currentTheme === 'light'"
-            name="heroicons:check"
-            class="w-4 h-4 ml-auto text-primary"
+            v-if="effectiveTheme === 'light'"
+            name="heroicons:check-20-solid"
+            class="w-4 h-4 ml-auto"
           />
-        </a>
+        </button>
       </li>
       <li>
-        <a
+        <button
           @click="setTheme('dark')"
-          class="flex items-center gap-2"
-          :class="{ 'active': currentTheme === 'dark' }"
+          class="flex items-center gap-2 w-full text-left"
+          :class="{ 'bg-primary text-primary-content focus:bg-primary focus:text-primary-content': effectiveTheme === 'dark' }"
         >
-          <Icon name="heroicons:moon" class="w-4 h-4" />
+          <Icon name="heroicons:moon-20-solid" class="w-4 h-4" />
           Dark
           <Icon
-            v-if="currentTheme === 'dark'"
-            name="heroicons:check"
-            class="w-4 h-4 ml-auto text-primary"
+            v-if="effectiveTheme === 'dark'"
+            name="heroicons:check-20-solid"
+            class="w-4 h-4 ml-auto"
           />
-        </a>
+        </button>
       </li>
       <li>
-        <a
+        <button
           @click="setTheme('system')"
-          class="flex items-center gap-2"
-          :class="{ 'active': currentTheme === 'system' }"
+          class="flex items-center gap-2 w-full text-left"
+          :class="{ 'bg-primary text-primary-content focus:bg-primary focus:text-primary-content': userPreference === 'system' }"
         >
-          <Icon name="heroicons:computer-desktop" class="w-4 h-4" />
+          <Icon name="heroicons:computer-desktop-20-solid" class="w-4 h-4" />
           System
           <Icon
-            v-if="currentTheme === 'system'"
-            name="heroicons:check"
-            class="w-4 h-4 ml-auto text-primary"
+            v-if="userPreference === 'system'"
+            name="heroicons:check-20-solid"
+            class="w-4 h-4 ml-auto"
           />
-        </a>
+        </button>
       </li>
     </ul>
   </div>
 </template>
 
 <script setup>
-const currentTheme = ref('system')
-const isDarkMode = ref(false)
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
-// Computed property for the current theme icon
-const currentThemeIcon = computed(() => {
-  if (currentTheme.value === 'light') return 'heroicons:sun'
-  if (currentTheme.value === 'dark') return 'heroicons:moon'
-  return 'heroicons:computer-desktop'
+const userPreference = ref('system') // 'light', 'dark', or 'system'
+const systemTheme = ref('light') // 'light' or 'dark' based on OS
+
+// The actual theme being applied (light or dark)
+const effectiveTheme = computed(() => {
+  if (userPreference.value === 'system') {
+    return systemTheme.value
+  }
+  return userPreference.value
 })
 
-// Function to detect system preference
-const getSystemTheme = () => {
+const currentThemeIcon = computed(() => {
+  if (userPreference.value === 'light') return 'heroicons:sun-20-solid'
+  if (userPreference.value === 'dark') return 'heroicons:moon-20-solid'
+  // System preference icon changes based on current system theme
+  return systemTheme.value === 'dark' ? 'heroicons:moon-20-solid' : 'heroicons:sun-20-solid';
+})
+
+const updateSystemTheme = () => {
   if (typeof window !== 'undefined') {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    systemTheme.value = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
-  return 'light'
 }
 
-// Function to apply theme to HTML element
-const applyTheme = (theme) => {
+const applyHtmlTheme = () => {
   if (typeof document !== 'undefined') {
-    const htmlElement = document.documentElement
-
-    // Remove existing theme attributes
-    htmlElement.removeAttribute('data-theme')
-
-    if (theme === 'dark') {
-      htmlElement.setAttribute('data-theme', 'dark')
-      isDarkMode.value = true
-    } else if (theme === 'light') {
-      htmlElement.setAttribute('data-theme', 'light')
-      isDarkMode.value = false
-    } else {
-      // System theme
-      const systemTheme = getSystemTheme()
-      htmlElement.setAttribute('data-theme', systemTheme)
-      isDarkMode.value = systemTheme === 'dark'
-    }
+    document.documentElement.setAttribute('data-theme', effectiveTheme.value)
   }
 }
 
-// Function to set theme
-const setTheme = (theme) => {
-  currentTheme.value = theme
-  applyTheme(theme)
-
-  // Save to localStorage
+const setTheme = (themeChoice) => {
+  userPreference.value = themeChoice
   if (typeof localStorage !== 'undefined') {
-    localStorage.setItem('theme-preference', theme)
+    localStorage.setItem('theme-preference', themeChoice)
   }
+  applyHtmlTheme()
 }
 
-// Initialize theme on component mount
+let mediaQueryListener = null
+
 onMounted(() => {
-  // Get saved preference or default to system
-  let savedTheme = 'system'
-  if (typeof localStorage !== 'undefined') {
-    savedTheme = localStorage.getItem('theme-preference') || 'system'
-  }
+  updateSystemTheme() // Initial check
+  const savedPref = typeof localStorage !== 'undefined' ? localStorage.getItem('theme-preference') : null
+  userPreference.value = savedPref || 'system'
+  applyHtmlTheme()
 
-  currentTheme.value = savedTheme
-  applyTheme(savedTheme)
-
-  // Listen for system theme changes
   if (typeof window !== 'undefined') {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    mediaQueryListener = window.matchMedia('(prefers-color-scheme: dark)')
     const handleChange = () => {
-      if (currentTheme.value === 'system') {
-        applyTheme('system')
+      updateSystemTheme()
+      if (userPreference.value === 'system') {
+        applyHtmlTheme()
       }
     }
-
-    mediaQuery.addEventListener('change', handleChange)
-
-    // Cleanup listener on component unmount
+    mediaQueryListener.addEventListener('change', handleChange)
     onUnmounted(() => {
-      mediaQuery.removeEventListener('change', handleChange)
+      mediaQueryListener.removeEventListener('change', handleChange)
     })
   }
 })
 
-// Apply theme on server side (for SSR)
-if (typeof document !== 'undefined') {
-  // This runs on client side
-  const savedTheme = localStorage.getItem('theme-preference') || 'system'
-  applyTheme(savedTheme)
-}
+// No SSR data-theme needed here as it's client-preference driven
 </script>
 
 <style scoped>
-/* Additional styling if needed */
 .dropdown-content {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /* DaisyUI shadow-xl is quite large, shadow-lg is more subtle */
+  box-shadow: theme('boxShadow.lg');
+}
+.menu-title span {
+  font-weight: 600;
+  color: theme('colors.base-content / 0.6');
+}
+/* Ensure buttons in menu take full width and have proper styling */
+.dropdown-content li > button {
+  border-radius: theme('borderRadius.btn');
+  padding-top: theme('spacing.2');
+  padding-bottom: theme('spacing.2');
+}
+.dropdown-content li > button:hover {
+    background-color: theme('colors.base-content / 0.1');
+}
+
+/* Active state styling for theme buttons */
+.dropdown-content li > button:is(.bg-primary) {
+    font-weight: 600;
 }
 </style>

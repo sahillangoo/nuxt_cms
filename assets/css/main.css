@@ -1,15 +1,21 @@
-@import "tailwindcss";
-
-@plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
-  root: ":root";
-  include: ;
-  exclude: ;
-  prefix: ;
-  logs: false;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   scroll-behavior: smooth;
+  /* Apply base background and text color for the default (light) theme.
+     DaisyUI with base:true in tailwind.config.js should handle this,
+     but this can serve as an explicit fallback or initial state. */
+  background-color: theme('colors.base-100');
+  color: theme('colors.neutral'); /* Default text color */
+}
 
+/* Specific global overrides if needed, e.g., for typography from @nuxt/fonts */
+body {
+  font-family: theme('fontFamily.sans');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: theme('fontFamily.headings');
 }
